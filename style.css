@@ -1,0 +1,144 @@
+/* --- Global Reset & Font --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This makes layout easier */
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #fff;
+    
+    /* Using the purple/pink gradient you liked */
+    background-image: linear-gradient(to right, #6a00c9, #ff00bf);
+    
+    /* This setup centers your game on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- The Main Game Card ("Glassmorphism" effect) --- */
+#wrapper {
+    width: 100%;
+    max-width: 500px; /* Limits width on large screens */
+    
+    /* The "glass" look */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* --- Typography --- */
+h1 {
+    font-size: 2.5rem; /* Responsive font size */
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#guess {
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: block; /* Makes it sit on its own line */
+    margin-bottom: 10px;
+}
+
+/* --- Form Elements --- */
+.form {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column; /* Stacks input and button */
+    gap: 15px; /* Adds space between them */
+}
+
+#guessField {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem; /* Larger text */
+    text-align: center;
+    color: #333;
+    padding: 10px;
+}
+
+#subt {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    
+    /* Button gradient */
+    background: linear-gradient(to right, #c141ff, #ff00bf);
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#subt:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Results --- */
+.resultParas {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.resultParas p {
+    margin-bottom: 5px;
+}
+
+.guesses {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 20px;
+
+}
+.width{
+    width: 200px;
+    text-align: left;
+}
+
+.lastResult {
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.guesses{
+    background-color: rgba(0, 0, 0, 0.407);
+
+}
+.lowOrHi{
+    z-index: 1000;
+    color: black;
+}
+
+#newGame{
+    background-color: rgba(252, 0, 181, 0.423);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
